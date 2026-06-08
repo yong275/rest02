@@ -11,9 +11,9 @@ const HISTORY = [
 ]
 
 const TEAM_VALUES = [
-  { icon: '🎯', title: '전문성', desc: '20년 현장 경험에서 나오는 깊은 기술력과 노하우' },
-  { icon: '🤝', title: '신뢰', desc: '고객과의 약속을 지키는 장기적 파트너십 추구' },
-  { icon: '🚀', title: '혁신', desc: '최신 기술 트렌드를 빠르게 도입하는 능동적 자세' },
+  { icon: 'fa-solid fa-medal', title: '전문성', desc: '20년 현장 경험에서 나오는 깊은 기술력과 노하우' },
+  { icon: 'fa-solid fa-handshake', title: '신뢰', desc: '고객과의 약속을 지키는 장기적 파트너십 추구' },
+  { icon: 'fa-solid fa-lightbulb', title: '혁신', desc: '최신 기술 트렌드를 빠르게 도입하는 능동적 자세' },
 ]
 
 export default function About() {
@@ -80,7 +80,7 @@ export default function About() {
           <div className="values-grid">
             {TEAM_VALUES.map(({ icon, title, desc }) => (
               <div key={title} className="value-card">
-                <div className="value-icon">{icon}</div>
+                <div className="value-icon"><i className={icon}></i></div>
                 <h3>{title}</h3>
                 <p>{desc}</p>
               </div>

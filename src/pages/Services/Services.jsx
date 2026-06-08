@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const SERVICES = [
   {
     id: 'computer',
-    icon: '🖥️',
+    icon: 'fa-solid fa-desktop',
     title: '컴퓨터 판매',
     color: 'blue',
     desc: '데스크탑, 노트북, 서버, 네트워크 장비 등 다양한 IT 기기를 공식 유통 채널을 통해 합리적인 가격에 공급합니다.',
@@ -12,7 +12,7 @@ const SERVICES = [
   },
   {
     id: 'program',
-    icon: '⚙️',
+    icon: 'fa-solid fa-code',
     title: '프로그램 개발',
     color: 'green',
     desc: 'ERP, CRM, 재고관리, 업무 자동화 등 기업의 업무 효율을 높이는 맞춤형 소프트웨어를 개발합니다.',
@@ -20,7 +20,7 @@ const SERVICES = [
   },
   {
     id: 'web',
-    icon: '🌐',
+    icon: 'fa-solid fa-globe',
     title: '웹 개발',
     color: 'red',
     desc: '기업 홈페이지부터 쇼핑몰, 웹 애플리케이션까지 최신 기술 스택으로 퍼포먼스 높은 웹사이트를 구축합니다.',
@@ -28,7 +28,7 @@ const SERVICES = [
   },
   {
     id: 'support',
-    icon: '🔧',
+    icon: 'fa-solid fa-screwdriver-wrench',
     title: 'IT 유지보수',
     color: 'blue',
     desc: '네트워크 인프라 구축, PC 관리, 서버 운영 등 기업의 IT 환경을 안정적으로 유지하고 관리합니다.',
@@ -55,7 +55,7 @@ export default function Services() {
           {SERVICES.map(({ id, icon, title, color, desc, features }) => (
             <div key={id} id={id} className={`service-detail-card border-${color}`}>
               <div className="service-detail-left">
-                <div className={`service-detail-icon icon-${color}`}>{icon}</div>
+                <div className={`service-detail-icon icon-${color}`}><i className={icon}></i></div>
                 <h2>{title}</h2>
                 <p>{desc}</p>
                 <Link to="/contact" className="btn-primary" style={{ marginTop: '1.5rem' }}>

@@ -3,25 +3,25 @@ import { Link } from 'react-router-dom'
 
 const SERVICES = [
   {
-    icon: '🖥️',
+    icon: 'fa-solid fa-desktop',
     title: '컴퓨터 판매',
     desc: '데스크탑, 노트북, 서버 등 다양한 IT 장비를 합리적인 가격에 공급합니다.',
     color: 'blue',
   },
   {
-    icon: '⚙️',
+    icon: 'fa-solid fa-code',
     title: '프로그램 개발',
     desc: 'ERP, CRM, 업무 자동화 솔루션 등 기업 맞춤형 소프트웨어를 개발합니다.',
     color: 'green',
   },
   {
-    icon: '🌐',
+    icon: 'fa-solid fa-globe',
     title: '웹 개발',
     desc: '기업 홈페이지, 쇼핑몰, 웹 애플리케이션을 최신 기술로 구축합니다.',
     color: 'red',
   },
   {
-    icon: '🔧',
+    icon: 'fa-solid fa-screwdriver-wrench',
     title: 'IT 유지보수',
     desc: '네트워크, 서버, PC 등 IT 인프라의 안정적인 운영을 지원합니다.',
     color: 'blue',
@@ -84,10 +84,14 @@ export default function Home() {
           <div className="services-grid">
             {SERVICES.map(({ icon, title, desc, color }) => (
               <div key={title} className={`service-card card-${color}`}>
-                <div className="service-icon">{icon}</div>
+                <div className={`service-icon icon-${color}`}>
+                  <i className={icon}></i>
+                </div>
                 <h3>{title}</h3>
                 <p>{desc}</p>
-                <Link to="/services" className="service-more">자세히 보기 →</Link>
+                <Link to="/services" className="service-more">
+                  자세히 보기 <i className="fa-solid fa-arrow-right"></i>
+                </Link>
               </div>
             ))}
           </div>
@@ -102,21 +106,27 @@ export default function Home() {
             <h2 className="section-title">왜 YJ IT Solutions인가?</h2>
             <ul className="why-list">
               <li>
-                <span className="why-icon green">✓</span>
+                <span className="why-icon green">
+                  <i className="fa-solid fa-check"></i>
+                </span>
                 <div>
                   <strong>20년 이상의 전문 노하우</strong>
                   <p>2003년 창업 이후 축적된 풍부한 경험과 기술력</p>
                 </div>
               </li>
               <li>
-                <span className="why-icon blue">✓</span>
+                <span className="why-icon blue">
+                  <i className="fa-solid fa-check"></i>
+                </span>
                 <div>
                   <strong>원스톱 IT 서비스</strong>
                   <p>하드웨어 구매부터 소프트웨어 개발, 유지보수까지 한 곳에서</p>
                 </div>
               </li>
               <li>
-                <span className="why-icon red">✓</span>
+                <span className="why-icon red">
+                  <i className="fa-solid fa-check"></i>
+                </span>
                 <div>
                   <strong>고객 맞춤형 솔루션</strong>
                   <p>기업의 규모와 요구사항에 맞는 최적화된 솔루션 제공</p>

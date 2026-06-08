@@ -33,21 +33,27 @@ export default function Contact() {
             <h2>연락처 정보</h2>
             <div className="info-items">
               <div className="info-item">
-                <div className="info-item-icon">📞</div>
+                <div className="info-item-icon">
+                  <i className="fa-solid fa-phone"></i>
+                </div>
                 <div>
                   <strong>전화</strong>
                   <p>000-0000-0000</p>
                 </div>
               </div>
               <div className="info-item">
-                <div className="info-item-icon">✉️</div>
+                <div className="info-item-icon">
+                  <i className="fa-solid fa-envelope"></i>
+                </div>
                 <div>
                   <strong>이메일</strong>
                   <p>info@yjit.co.kr</p>
                 </div>
               </div>
               <div className="info-item">
-                <div className="info-item-icon">🕐</div>
+                <div className="info-item-icon">
+                  <i className="fa-solid fa-clock"></i>
+                </div>
                 <div>
                   <strong>운영시간</strong>
                   <p>평일 09:00 ~ 18:00</p>
@@ -55,7 +61,9 @@ export default function Contact() {
                 </div>
               </div>
               <div className="info-item">
-                <div className="info-item-icon">📍</div>
+                <div className="info-item-icon">
+                  <i className="fa-solid fa-location-dot"></i>
+                </div>
                 <div>
                   <strong>주소</strong>
                   <p>주소를 입력해주세요</p>

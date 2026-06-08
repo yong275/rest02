@@ -96,8 +96,23 @@
 }
 
 .value-icon {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
+  width: 56px;
+  height: 56px;
+  background: rgba(41, 82, 204, 0.12);
+  border: 1px solid rgba(65, 105, 225, 0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--royal-blue-light);
+  margin: 0 auto 20px;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.value-card:hover .value-icon {
+  background: rgba(41, 82, 204, 0.22);
+  transform: translateY(-2px);
 }
 
 .value-card h3 {
