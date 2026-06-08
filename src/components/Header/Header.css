@@ -110,17 +110,18 @@
 
   .nav {
     position: fixed;
-    top: var(--header-height);
+    top: 0;
     left: 0;
     right: 0;
     background-color: var(--dark-blue-2);
     flex-direction: column;
     align-items: stretch;
-    padding: 16px 24px 24px;
+    padding: calc(var(--header-height) + 12px) 24px 28px;
     gap: 4px;
     box-shadow: var(--shadow-lg);
-    transform: translateY(-110%);
+    transform: translateY(-100%);
     transition: transform var(--transition);
+    z-index: 999;
   }
 
   .nav.open {
