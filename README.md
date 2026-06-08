@@ -1,16 +1,92 @@
-# React + Vite
+# YJ IT Solutions — 회사 공식 홈페이지
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+IT 전문 기업 회사 소개 사이트입니다.  
+컴퓨터 판매, 프로그램 개발, 웹 개발 서비스를 소개하는 정적 프론트엔드 프로젝트입니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 배포 주소
 
-## React Compiler
+**https://yong275.github.io/rest02**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 기술 스택
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| 구분 | 사용 기술 |
+|------|----------|
+| 프레임워크 | React 19 |
+| 빌드 도구 | Vite |
+| 라우팅 | React Router DOM v7 |
+| 스타일 | CSS (CSS 변수 기반 테마) |
+| 배포 | GitHub Pages (gh-pages) |
+
+---
+
+## 🎨 컬러 테마
+
+| 역할 | 색상 | HEX |
+|------|------|-----|
+| 메인 배경 | 다크블루 | `#0a1628` |
+| 서브 배경 | 다크블루2 | `#0d1f3c` |
+| 주요 강조 | 로열블루 | `#4169e1` |
+| 포인트1 | 다크그린 | `#1a5c2a` |
+| 포인트2 | 다크레드 | `#8b1a1a` |
+
+---
+
+## 📁 프로젝트 구조
+
+```
+src/
+├── components/
+│   ├── Header/       # 고정 헤더, 스크롤 감지, 모바일 햄버거 메뉴
+│   └── Footer/       # 4단 그리드 푸터
+├── pages/
+│   ├── Home/         # 메인 페이지
+│   ├── About/        # 회사소개, 핵심가치, 연혁
+│   ├── Services/     # 서비스 상세
+│   └── Contact/      # 문의 폼
+└── styles/
+    ├── variables.css # CSS 변수 (색상, 폰트 등)
+    └── global.css    # 전역 스타일
+```
+
+---
+
+## 📄 페이지 구성
+
+- **홈 (`/`)** — 히어로, 통계, 서비스 카드, WHY US, CTA
+- **회사소개 (`/about`)** — 회사 개요, 핵심 가치, 연혁 타임라인
+- **서비스 (`/services`)** — 4개 서비스 상세, 진행 프로세스
+- **문의 (`/contact`)** — 문의 폼
+
+---
+
+## ⚙️ 로컬 실행 방법
+
+```bash
+# 패키지 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
+# → http://localhost:5173 에서 확인
+```
+
+---
+
+## 🚀 빌드 & 배포
+
+```bash
+# GitHub Pages 배포 (빌드 포함)
+npm run deploy
+```
+
+---
+
+## 회사 정보
+
+- **창업일:** 2003년 9월 23일
+- **사업 분야:** 컴퓨터 판매 / 프로그램 개발 / 웹 개발
+- **개발일지:** [DEVLOG.md](./DEVLOG.md) 참고
