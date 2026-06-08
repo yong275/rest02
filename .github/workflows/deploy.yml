@@ -22,6 +22,11 @@ jobs:
       - name: 패키지 설치
         run: npm ci
 
+      - name: Git 사용자 설정
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+
       - name: 빌드 & GitHub Pages 배포
         run: npm run deploy
         env:
