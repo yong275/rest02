@@ -28,7 +28,8 @@ jobs:
           git config --global user.name "github-actions"
 
       - name: 빌드 & GitHub Pages 배포
-        run: npm run deploy
+        run: |
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/yong275/rest02.git
+          npm run deploy
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
