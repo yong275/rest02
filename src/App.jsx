@@ -8,7 +8,7 @@ import Contact from './pages/Contact/Contact'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/rest02">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
